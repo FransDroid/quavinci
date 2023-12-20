@@ -5,6 +5,8 @@ const String labelAddComments = 'Add a comment ...';
 const String labelBy = 'by';
 const String labelShare = 'Share';
 const String labelError = 'Error';
+const String labelReward = '1 Reward';
+const String labelJoin = 'Join';
 
 
 //App Values

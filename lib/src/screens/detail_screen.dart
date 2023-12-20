@@ -18,46 +18,69 @@ class _DetailScreenState extends State<DetailScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
-        title: Row(
-          children: [
-            CircleAvatar(
+          automaticallyImplyLeading: false,
+          title: Row(
+            children: [
               // Display author's image using a CircleAvatar
-              backgroundImage: NetworkImage(widget.redditPost.imageUrl),
-              backgroundColor: Colors.transparent,
+              CircleAvatar(
+                // Display author's image using a CircleAvatar
+                backgroundImage: NetworkImage(widget.redditPost.imageUrl),
+                backgroundColor: Colors.transparent,
+              ),
+              const SizedBox(
+                width: gapSmall,
+              ),
+              // Display author, time, and source with specific styles
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(widget.redditPost.subreddit,
+                      style: const TextStyle(
+                          fontWeight: FontWeight.w500, fontSize: textSizeBig)),
+                  Text(
+                    "$labelBy ${widget.redditPost.post.author} . ${widget.redditPost.post.time} . i.redd.it",
+                    style: const TextStyle(
+                        fontSize: textSizeSmall, color: Colors.grey),
+                  ),
+                ],
+              ),
+            ],
+          ),
+          actions: [
+            // Join button with custom styling
+            TextButton(
+              onPressed: () {},
+              style: TextButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(borderRadius),
+                  side: BorderSide(
+                    color: Theme.of(context).primaryColor,
+                    width: borderWith,
+                  ),
+                ),
+              ),
+              child: Text(labelJoin.toUpperCase()),
             ),
             const SizedBox(
-              width: gapSmall,
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(widget.redditPost.subreddit,
-                    style: const TextStyle(
-                        fontWeight: FontWeight.w500, fontSize: textSizeBig)),
-                Text(
-                  "$labelBy ${widget.redditPost.post.author} . ${widget.redditPost.post.time} . i.redd.it",
-                  style: const TextStyle(
-                      fontSize: textSizeSmall, color: Colors.grey),
-                ),
-              ],
-            ),
-          ],
-        ),
-      ),
+              width: gapBig,
+            )
+          ]),
       body: Padding(
         padding: const EdgeInsets.all(paddingAll),
         child: Column(
           children: [
             Expanded(
+              // Display Reddit post details using cardWidget
               child: cardWidget(widget.redditPost),
             ),
+            // Comment input section
             Align(
               alignment: Alignment.bottomCenter,
               child: Padding(
                 padding: const EdgeInsets.all(paddingAll),
                 child: Row(
                   children: [
+                    // Text input for adding comments
                     Expanded(
                         child: SizedBox(
                       height: containerHeightSmall,
@@ -76,6 +99,7 @@ class _DetailScreenState extends State<DetailScreen> {
                     const SizedBox(
                       width: gapBig,
                     ),
+                    // Send button with custom styling
                     FloatingActionButton(
                         onPressed: () {},
                         backgroundColor: Theme.of(context).primaryColor,

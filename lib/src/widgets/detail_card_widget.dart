@@ -36,9 +36,9 @@ Widget cardWidget(RedditPost redditPost) {
                 height: gapSmall,
               ),
               // Display post author and time
-              Text(
-                "$labelBy ${redditPost.post.author} . ${redditPost.post.time}",
-                style: const TextStyle(
+              const Text(
+                "$labelReward ",
+                style: TextStyle(
                     fontSize: textSizeSmall, color: Colors.grey),
               ),
               const SizedBox(
