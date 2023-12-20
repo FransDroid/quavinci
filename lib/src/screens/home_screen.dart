@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:quavinci/src/screens/trending_screen.dart';
 
@@ -8,49 +9,61 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeScreenState extends State<HomeScreen>
+    with SingleTickerProviderStateMixin {
+  late final TabController controller;
   int _currentIndex = 0;
 
   @override
+  void initState() {
+    controller = TabController(length: 4, vsync: this);
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: _buildBody(),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _currentIndex,
-        type: BottomNavigationBarType.fixed,
-        selectedItemColor: Colors.white,
-        unselectedItemColor: Colors.grey.shade100,
-        items: [
-          createBottomNavItem(Icons.home, Colors.grey),
-          createBottomNavItem(Icons.wordpress_outlined, Colors.grey),
-          createBottomNavItem(Icons.chat_bubble_outline, Colors.grey),
-          createBottomNavItem(Icons.mail_outline, Colors.grey),
-        ],
-        onTap: (index) {
-          setState(() {
-            _currentIndex = index;
-          });
-        },
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        shape: const CircleBorder(),
-        backgroundColor: Theme.of(context).primaryColor,
-        child: const Icon(
-          Icons.add,
-          color: Colors.white,
+    return DefaultTabController(
+      length: 4,
+      child: Scaffold(
+        body: _buildBody(),
+        bottomNavigationBar: TabBar(
+          controller: controller,
+          indicatorWeight: 5,
+          indicatorColor: Theme.of(context).primaryColor,
+          indicatorSize: TabBarIndicatorSize.label,
+          unselectedLabelColor: Colors.grey,
+          onTap: (index) {
+            setState(() {
+              _currentIndex = index;
+            });
+          },
+          tabs: [
+            createBottomNavItem(Icons.home_outlined, Colors.grey),
+            createBottomNavItem(Icons.language_outlined, Colors.grey),
+            createBottomNavItem(CupertinoIcons.chat_bubble, Colors.grey),
+            createBottomNavItem(Icons.mail_outline, Colors.grey),
+          ],
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          shape: const CircleBorder(),
+          backgroundColor: Theme.of(context).primaryColor,
+          child: const Icon(
+            Icons.add,
+            color: Colors.white,
+          ),
         ),
       ),
     );
   }
 
-  BottomNavigationBarItem createBottomNavItem(IconData iconData, Color color) {
-    return BottomNavigationBarItem(
-        icon: Icon(
-          iconData,
-          color: color,
-        ),
-        label: '');
+  Tab createBottomNavItem(IconData iconData, Color color) {
+    return Tab(
+      icon: Icon(
+        iconData,
+        color: color,
+      ),
+    );
   }
 
   Widget _buildBody() {
@@ -58,7 +71,7 @@ class _HomeScreenState extends State<HomeScreen> {
       case 0:
         return const TrendingScreen();
       case 1:
-        return Container(color: Colors.teal,);
+        return Container();
       case 2:
         return Container();
       case 3:
