@@ -64,27 +64,27 @@
           {
             "author": "RandomUser1",
             "text": "This is interesting!",
-            "profile_picture": "https://www.example.com/randomuser1.jpg"
+            "profile_picture": "https://www.iconpacks.net/icons/2/free-reddit-logo-icon-2436-thumb.png"
           },
           {
             "author": "RandomUser2",
             "text": "What's your take on the current situation?",
-            "profile_picture": "https://www.example.com/randomuser2.jpg"
+            "profile_picture": "https://www.iconpacks.net/icons/2/free-reddit-logo-icon-2436-thumb.png"
           },
           {
             "author": "RandomUser3",
             "text": "I totally agree with the sentiment here.",
-            "profile_picture": "https://www.example.com/randomuser3.jpg"
+            "profile_picture": "https://www.iconpacks.net/icons/2/free-reddit-logo-icon-2436-thumb.png"
           },
           {
             "author": "RandomUser4",
             "text": "Great discussion! Keep it up.",
-            "profile_picture": "https://www.example.com/randomuser4.jpg"
+            "profile_picture": "https://www.iconpacks.net/icons/2/free-reddit-logo-icon-2436-thumb.png"
           },
           {
             "author": "RandomUser5",
             "text": "I had a similar thought recently.",
-            "profile_picture": "https://www.example.com/randomuser5.jpg"
+            "profile_picture": "https://www.iconpacks.net/icons/2/free-reddit-logo-icon-2436-thumb.png"
           }
         ]
       }
@@ -163,7 +163,56 @@
         "upvotes": "12,0K",
         "comments": "2.5K",
         "share": true,
-        "image": true
+        "comments_list": [
+          {
+            "author": "HelloWorld404",
+            "text": "What is new normal? It's absolutely abnormal!",
+            "profile_picture": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQDBDfZLbMvoUc7u7z1WpQhb3qSNM9ins_cCNgznOCciDbqo1T3",
+            "sub_comments": [
+              {
+                "author": "BlueSky312",
+                "profile_picture": "https://www.iconpacks.net/icons/2/free-reddit-logo-icon-2436-thumb.png",
+                "text": "Her death be no pity"
+              },
+              {
+                "author": "BubbleWrapMan",
+                "text": "Don't lift it, search for vaccine",
+                "profile_picture": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQDBDfZLbMvoUc7u7z1WpQhb3qSNM9ins_cCNgznOCciDbqo1T3",
+                "sub_comments": [
+                  {
+                    "author": "MedalOfHunter4",
+                    "profile_picture": "https://www.iconpacks.net/icons/2/free-reddit-logo-icon-2436-thumb.png",
+                    "text": "Why do I get a feeling the 'New Normal' will feel something Dystopian like from 1984?"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "author": "MedalOfHunter4",
+            "text": "Why do I get a feeling the New Normal will feel something Dystopian like from 1984?",
+            "profile_picture": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQDBDfZLbMvoUc7u7z1WpQhb3qSNM9ins_cCNgznOCciDbqo1T3",
+            "sub_comments": [
+              {
+                "author": "BlueSky312",
+                "profile_picture": "https://www.iconpacks.net/icons/2/free-reddit-logo-icon-2436-thumb.png",
+                "text": "Her death be no pity"
+              },
+              {
+                "author": "BubbleWrapMan",
+                "text": "Don't lift it, search for vaccine",
+                "profile_picture": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQDBDfZLbMvoUc7u7z1WpQhb3qSNM9ins_cCNgznOCciDbqo1T3",
+                "sub_comments": [
+                  {
+                    "author": "MedalOfHunter4",
+                    "profile_picture": "https://www.iconpacks.net/icons/2/free-reddit-logo-icon-2436-thumb.png",
+                    "text": "Why do I get a feeling the 'New Normal' will feel something Dystopian like from 1984?"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     }
   ]

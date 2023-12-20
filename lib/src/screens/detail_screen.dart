@@ -59,7 +59,12 @@ class _DetailScreenState extends State<DetailScreen> {
                   ),
                 ),
               ),
-              child: Text(labelJoin.toUpperCase()),
+              child: Text(
+                labelJoin.toUpperCase(),
+                style: TextStyle(
+                  color: Theme.of(context).primaryColor,
+                ),
+              ),
             ),
             const SizedBox(
               width: gapBig,
@@ -71,7 +76,7 @@ class _DetailScreenState extends State<DetailScreen> {
           children: [
             Expanded(
               // Display Reddit post details using cardWidget
-              child: cardWidget(widget.redditPost),
+              child: cardWidget(widget.redditPost, context),
             ),
             // Comment input section
             Align(

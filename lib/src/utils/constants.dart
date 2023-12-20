@@ -7,9 +7,11 @@ const String labelShare = 'Share';
 const String labelError = 'Error';
 const String labelReward = '1 Reward';
 const String labelJoin = 'Join';
+const String labelReply = 'Reply';
 
 
 //App Values
+const double paddingBig = 20;
 const double paddingAll = 8.0;
 const double paddingAllSmall = 4.0;
 const double marginAll = 8.0;
